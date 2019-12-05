@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 </head>
 <body>
-    
+    <h1>HOME</h1>
 
     
-    <script src="main.js"></script>
+    <script src=""></script>
 </body>
 </html>

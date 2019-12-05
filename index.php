@@ -1,3 +1,9 @@
+<?php
+$msg = "";
+if (isset($_GET['username'])){
+    $msg = ", Silahkan Login ".$_GET['username'];
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,14 +14,46 @@
     <link rel="stylesheet" type="text/css" media="screen" href="asset/style.css">
 </head>
 <body>
-    <div id="header">
-        Header
+    <div class="main-section">
+        <header>
+            <h2>Selamat Datang di Nonegram<?=$msg?></h2>
+        </header>
+        <div id="login-box">
+            <br>
+            <h3>Login</h3>
+            <form action="appcore/login.php" method="POST">
+                <label for="user">Username</label>
+                <input type="text" name="username" id="user" value="">
+                <br>
+                <br>
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass">
+                <br>
+                <br>
+                <input id="login" type="submit" name="login" value="Login">
+            </form>
+            <button onclick="daftar()">Belum daftar?</button>
+        </div>
+        <div id="reg-box" class="hide">
+            <br>
+            <h3>Daftar</h3>
+            <form action="appcore/register.php" method="POST">
+                <label for="user">Username</label>
+                <input type="text" name="username" id="user">
+                <br>
+                <br>
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass">
+                <br>
+                <br>
+                <input id="register" type="submit" name="login" value="Daftar">
+            </form>
+            <button onclick="login()">Ingin login?</button>
+        </div>
+        <footer>
+            Nonegram &copy 2019
+        </footer>
     </div>
-    <div id="content">
-        Content
-    </div>
-    <div id="footer">
-        Footer
-    </div>
+<script src="asset/style.js"></script>
 </body>
 </html>
