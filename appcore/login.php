@@ -4,7 +4,7 @@ include_once "dbcon.php";
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-$query = $connection->query("SELECT * FROM user WHERE username = 'faizal'");
+$query = $connection->query("SELECT * FROM user WHERE username = '$username'");
 $last = mysqli_fetch_assoc($query);
 $lastpass = $last['pass'];
 
