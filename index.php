@@ -30,9 +30,9 @@ if (isset($_GET['username'])){
                 <input type="password" name="password" id="pass">
                 <br>
                 <br>
-                <input id="login" type="submit" name="login" value="Login">
+                <input class="btn" type="submit" name="login" value="Login">
             </form>
-            <button onclick="daftar()">Belum daftar?</button>
+            <button class="btn" onclick="daftar()">Belum daftar?</button>
         </div>
         <div id="reg-box" class="hide">
             <br>
@@ -46,9 +46,9 @@ if (isset($_GET['username'])){
                 <input type="password" name="password" id="pass">
                 <br>
                 <br>
-                <input id="register" type="submit" name="login" value="Daftar">
+                <input class="btn" type="submit" name="reg" value="Daftar">
             </form>
-            <button onclick="login()">Ingin login?</button>
+            <button class="btn" onclick="login()">Ingin login?</button>
         </div>
         <footer>
             Nonegram &copy 2019
