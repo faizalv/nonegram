@@ -6,7 +6,7 @@
 
 include_once "dbcon.php";
 
-if (isset($_POST['reg'])) {
+if (isset($_POST['reg']) && $_POST['username']!="") {
     $id = uniqid();
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -14,10 +14,13 @@ if (isset($_POST['reg'])) {
     $query->bind_param("ss", $id, $username);
     if ($query->execute()) {
         echo "<p>Berhasil mendaftar <br> Tunggu sebentar, anda akan diarahkan ke halaman login.<p>";
-        header("Refresh: 2; URL=/nonegram/index.php?username=$username");
+        header("Refresh: 2; URL=/nonegram/index.php?registered=$username");
     } elseif ($query->errno == 1062) {
         echo "Username telah digunakan";
     } else {
         echo $query->error;
     }
+    $query->close();
+} else {
+    header("Location:/nonegram");
 }

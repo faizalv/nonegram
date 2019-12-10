@@ -16,7 +16,7 @@ html, body {
 
 .main-section {
     text-align: center;
-    color: #fff;
+    /*color: #fff;*/
     background-color: #fff;
     min-height: 100vh;
     overflow: hidden;
