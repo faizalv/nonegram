@@ -81,7 +81,7 @@ if (isset($_SESSION['logged-in'])) {
         <div class="row pt-5">
           <div class="col-12">
             <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-            <h1 class="site-logo"><a href="index.html">Nonegram</a></h1>
+            <h1 class="site-logo text-center"><a href="index.html">Nonegram</a></h1>
           </div>
         </div>
       </div>
@@ -95,10 +95,10 @@ if (isset($_SESSION['logged-in'])) {
             <div class="row justify-content-center">
               <div class="col-md-12">
                 <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                  <div class="blog-a">
+                  <!-- <div class="blog-a">
                     <img src="asset/images/img_.jpg" alt="" >
                     <a href="">Nama User</a>
-                  </div>
+                  </div> -->
                   <div class="blog-content-body">
                   <img src="asset/images/img_5.jpg" alt="Image placeholder">
                     <div class="post-meta">
@@ -112,10 +112,10 @@ if (isset($_SESSION['logged-in'])) {
               </div>
               <div class="col-md-12">
                 <a href="blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                  <div class="a">
+                  <!-- <div class="a">
                     <img src="asset/images/img_.jpg" alt="" >
                     <a href="">Nama User</a>
-                  </div>  
+                  </div>   -->
                   <img src="asset/images/img_6.jpg" alt="Image placeholder">
                   <div class="blog-content-body">
                     <div class="post-meta">
