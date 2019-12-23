@@ -15,6 +15,12 @@ _image_ (lowercase)
 * path varchar(255)
 * user_id varchar(30)
 
+_upload_ (lowercase)
+* id varchar(30)
+* foto varchar(255)
+* deskripsi varchar(255)
+* user_id varchar(30)
+
 
 __Jangan Lupa!__
 masukkan file _dbcon.php_ pada folder _.gitignore_
