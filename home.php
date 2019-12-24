@@ -37,10 +37,9 @@ if (isset($_SESSION['logged-in'])) {
       <span class="navbar-toggler-icon">
       </span>
     </button>
-      <img src="<?= $data['profile_path'] ?>" class="rounded mr-5" alt="foto" weight="30" height="30">
 </nav>
 
-<div class="row justify-content-center mt-5" style="margin:0;">
+<div class="row justify-content-center mt-5 mb-5" style="margin:0;">
   <div class="col-sm-5">
 
       <?php
@@ -48,15 +47,15 @@ if (isset($_SESSION['logged-in'])) {
       foreach ($datas as $d){
       ?>
           <div class="container">
-            <div class="card" style="width: 35rem;">
-              <div class="card-header">
-                <div class="text-left">
-                  <img src="<?=$d['profile_path']?>" height="30" class="rounded float-right" alt="foto">
+            <div id="content" class="card" style="width: 35rem;">
+              <div id="content-header" class="card-header sticky-top bg-light">
+                <div id="profile-pic-holder" class="float-right">
+                  <img id="profile-pic" src="<?=$d['profile_path']?>" height="30" class="float-right" alt="foto">
                 </div>
-                <h5 class="card-title"><?php echo $d['username'];?></h5>
+                <h5 class="card-title float-right mt-1 mr-1"><?php echo $d['username'];?></h5>
               </div>
-              <div class="card-body"> 
-                <img src="<?=$d['path']?>" style="width: 100%" alt="foto upload">
+              <div class="card-body">
+                <img id="#pic-content" class="position-relative mb-5" src="<?=$d['path']?>" style="width: 100%" alt="foto upload">
               </div>
             </div>
           </div>
