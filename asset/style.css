@@ -67,6 +67,13 @@ header {
     display: none;
 }
 
+.navbar {
+    padding: 10px 100px;
+}
+
+.container{
+    padding-top:40px;
+}
 
 
 footer {

@@ -34,7 +34,7 @@ if (isset($_SESSION['logged-in'])) {
 <body>
 <div class="main-section">
     <header style="color: #34495e; margin: 20px 0 10px 0;">
-        <h2>Selamat Datang di Nonegram<?= $reg ?></h2>
+        <h2> Selamat Datang di Nonegram<?= $reg ?></h2>
         <br>
         <span style="color: red;"><?= $error ?></span>
     </header>
