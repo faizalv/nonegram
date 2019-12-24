@@ -31,10 +31,26 @@ if (isset($_SESSION['logged-in'])) {
     <img style="width: 70px; border: 1px solid black; border-radius: 7px;" src="<?= $data['profile_path'] ?>" alt="">
     <span style="position: relative; top: -25px;"><?= $data['username'] ?></span>
 </div>
+<div>
+    <a href="/nonegram/upload.php">New Post</a>
+    <a href="/nonegram/profile.php">Update profile</a>
+</div>
 <form action="" method="post">
     <button type="submit" name="logout">Logout</button>
 </form>
+<br>
+<br>
 
+<?php
+$datas = $connection->query("select image.id, image.path, user.username from image inner join user on image.user_id=user.id");
+foreach ($datas as $d){
+?>
+<div style="border: 1px solid black; width: 300px; height: 300px; text-align: center; overflow-y: hidden">
+    <span><?=$d['username']?> Memposting :</span>
+    <img style="width: 100%;"src="<?=$d['path']?>" alt="">
+</div>
+    <br>
+<?php } ?>
 
 <script src=""></script>
 </body>
