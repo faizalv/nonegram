@@ -34,39 +34,45 @@ if (isset($_SESSION['logged-in'])) {
 <body>
 <div class="main-section">
     <header style="color: #34495e; margin: 20px 0 10px 0;">
-        <h2>Selamat Datang di Nonegram<?= $reg ?></h2>
+        <h2> Selamat Datang di Nonegram<?= $reg ?></h2>
         <br>
         <span style="color: red;"><?= $error ?></span>
     </header>
     <div id="login-box">
         <br>
-        <h3>Login</h3>
-        <form action="appcore/login.php" method="POST">
+        <div id = "title-log">
+            <h3>Login</h3>
+            <form action="appcore/login.php" method="POST">
+        </div>
             <label for="user">Username</label>
-            <input type="text" name="username" id="user" value="">
             <br>
-            <br>
+            <input type="text" name="username" id="user" class="form-content" >
+            <div class="form-border"></div>
             <label for="pass">Password</label>
-            <input type="password" name="password" id="pass">
             <br>
-            <br>
-            <input class="btn" type="submit" name="login" value="Login">
+            <input type="password" name="password" id="pass" class="form-content">
+            <div class="form-border"></div>
+            <input class="btn" type="submit" name="login" value="Login" id="signup">
         </form>
         <button class="btn" onclick="daftar()">Belum daftar?</button>
     </div>
+
+
+
     <div id="reg-box" class="hide">
         <br>
         <h3>Daftar</h3>
         <form action="appcore/register.php" method="POST">
             <label for="user">Username</label>
-            <input type="text" name="username" id="user">
             <br>
+            <input type="text" name="username" id="user" class="form-content">
+            <div class="form-border"></div>
             <br>
             <label for="pass">Password</label>
-            <input type="password" name="password" id="pass">
             <br>
-            <br>
-            <input class="btn" type="submit" name="reg" value="Daftar">
+            <input type="password" name="password" id="pass" class="form-content">
+            <div class="form-border"></div>
+            <input class="btn" type="submit" name="reg" value="Daftar" id="daftar">
         </form>
         <button class="btn" onclick="login()">Ingin login?</button>
     </div>
