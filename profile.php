@@ -1,7 +1,7 @@
 <?php
-$msg = "";
+$msg = "Foto profil lama anda akan terhapus digantikan dengan foto baru.";
 if ($_GET['first'] == true) {
-    $msg = "Atur foto profil anda sebelum melanjutkan";
+    $msg = "Sebaiknya anda menyiapkan foto profil sebelum melanjutkan.";
 }
 ?>
 
@@ -25,6 +25,8 @@ if ($_GET['first'] == true) {
         <input type="file" name="profile">
         <input type="submit" value="Simpan">
     </form>
+    <br>
+    <a href="/nonegram/home.php">Kembali ke Home</a>
 </div>
 </body>
 </html>
