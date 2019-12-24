@@ -21,7 +21,7 @@ if (isset($_SESSION['logged-in'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nonegram htdocs</title>
+    <title>Nonegram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
 
@@ -51,44 +51,45 @@ if (isset($_SESSION['logged-in'])) {
           </div>
         </li>
       </ul>
-      <img src="<?= $data['profile_path'] ?>" class="rounded" alt="foto">
+      <img src="<?= $data['profile_path'] ?>" class="rounded mr-5" alt="foto" weight="30" height="30">
+      <form action="" method="post">
+        <button class="btn btn-info btn-sm" type="submit" name="logout"> Logout</button>
+      </form>  
     </div>
 </nav>
 
-<div>
-    <a href="/nonegram/upload.php">New Post</a>
+<div class="mt-5">
+    <a class="text-justify" href="/nonegram/upload.php">New Post</a>
     <a href="/nonegram/profile.php">Update profile</a>
 </div>
-
-<?php 
-    include 'appcore/dbcon.php';
-    $data = mysqli_query($connection,"select * from user");
-    while($d = mysqli_fetch_array($data)){ ?>
+<?php
+$datas = $connection->query("select image.id, image.path, user.username, user.profile_path from image inner join user on image.user_id=user.id");
+foreach ($datas as $d){
+?>
       <div class="container">
         <div class="row  justify-content-center">
           <div class="col-sm-5">
             <div class="card" style="width: 30rem;">
-              <div class="card-body">
+              <div class="card-header">
                 <div class="text-left">
-                  <img src="<?=$d['path']?>" class="rounded float-right" alt="foto">
+                  <img src="<?=$d['profile_path']?>" height="30" class="rounded float-right" alt="foto">
                 </div>
                 <h5 class="card-title"><?php echo $d['username'];?></h5>
-
-                <img src="" alt="foto upload">
-                <h6 class="card-subtitle mb-2 text-muted">title</h6>
+                
+              </div>
+              <div class="card-body"> 
+                <img src="<?=$d['path']?>" style="width: 100%" alt="foto upload">
               </div>
             </div>
           </div>
         </div>
       </div>
 
-    <?php } ?>
+<?php } ?>
     
 
     <script src="asset/js/jquery-3.2.1.min.js"></script>
-    <script src="asset/js/jquery-migrate-3.0.0.js"></script>
     <script src="asset/js/bootstrap.min.js"></script>
-    
     <script src="asset/js/main.js"></script>
 
 </body>
